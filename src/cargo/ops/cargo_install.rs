@@ -7,9 +7,9 @@ use core::source::Source;
 use sources::PathSource;
 
 #[cfg(windows)]
-const EXE_SUFIX: &'static str = ".exe";
+const EXE_SUFFIX: &'static str = ".exe";
 #[cfg(not(windows))]
-const EXE_SUFIX: &'static str = "";
+const EXE_SUFFIX: &'static str = "";
 
 pub fn install(manifest_path: &Path,
                name: Option<String>,
@@ -32,7 +32,7 @@ pub fn install(manifest_path: &Path,
             None => human("a bin target must be available for `cargo install`"),
         }
     }));
-    let bin_name = format!("{}{}", bin.name(), EXE_SUFIX);
+    let bin_name = format!("{}{}", bin.name(), EXE_SUFFIX);
     match bins.next() {
         Some(..) => return Err(
             human("`cargo install` requires that a project only have one executable. \
