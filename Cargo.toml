@@ -1,0 +1,7 @@
+[package]
+
+name = "test-try"
+version = "0.0.1"
+authors = ["bombless <bombless@126.com>"]
+[dependencies.try]
+path = "try"

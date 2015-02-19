@@ -1,0 +1,11 @@
+[root]
+name = "test-try"
+version = "0.0.1"
+dependencies = [
+ "try 0.0.1",
+]
+
+[[package]]
+name = "try"
+version = "0.0.1"
+
